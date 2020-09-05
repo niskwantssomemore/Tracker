@@ -1,0 +1,6 @@
+framework module Pods_Aleksei_Varaksin_Tracker {
+  umbrella header "Pods-Aleksei_Varaksin_Tracker-umbrella.h"
+
+  export *
+  module * { export * }
+}

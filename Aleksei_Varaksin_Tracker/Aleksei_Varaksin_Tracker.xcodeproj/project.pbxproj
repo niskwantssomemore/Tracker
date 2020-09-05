@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B1E2E7E9585F8EEA4578068 /* Pods_Aleksei_Varaksin_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225B074C21CA8237FE6F5106 /* Pods_Aleksei_Varaksin_Tracker.framework */; };
+		41EF98E02503A88D00992B12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF98DF2503A88D00992B12 /* AppDelegate.swift */; };
+		41EF98E22503A88D00992B12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF98E12503A88D00992B12 /* SceneDelegate.swift */; };
+		41EF98E72503A88D00992B12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EF98E52503A88D00992B12 /* Main.storyboard */; };
+		41EF98E92503A88F00992B12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41EF98E82503A88F00992B12 /* Assets.xcassets */; };
+		41EF98EC2503A88F00992B12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EF98EA2503A88F00992B12 /* LaunchScreen.storyboard */; };
+		41EF98F42503AD1A00992B12 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF98F32503AD1A00992B12 /* MapViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		225B074C21CA8237FE6F5106 /* Pods_Aleksei_Varaksin_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aleksei_Varaksin_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41EF98DC2503A88D00992B12 /* Aleksei_Varaksin_Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aleksei_Varaksin_Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41EF98DF2503A88D00992B12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		41EF98E12503A88D00992B12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		41EF98E62503A88D00992B12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		41EF98E82503A88F00992B12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		41EF98EB2503A88F00992B12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		41EF98ED2503A88F00992B12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41EF98F32503AD1A00992B12 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7AB22DA4CBED4CCEFF389BDE /* Pods-Aleksei_Varaksin_Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aleksei_Varaksin_Tracker.release.xcconfig"; path = "Target Support Files/Pods-Aleksei_Varaksin_Tracker/Pods-Aleksei_Varaksin_Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		BDA1AC8FE2BCD7C8926558B6 /* Pods-Aleksei_Varaksin_Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aleksei_Varaksin_Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Aleksei_Varaksin_Tracker/Pods-Aleksei_Varaksin_Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41EF98D92503A88D00992B12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1E2E7E9585F8EEA4578068 /* Pods_Aleksei_Varaksin_Tracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29CD64FEA2C97C5F37897C82 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDA1AC8FE2BCD7C8926558B6 /* Pods-Aleksei_Varaksin_Tracker.debug.xcconfig */,
+				7AB22DA4CBED4CCEFF389BDE /* Pods-Aleksei_Varaksin_Tracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		41EF98D32503A88D00992B12 = {
+			isa = PBXGroup;
+			children = (
+				41EF98DE2503A88D00992B12 /* Aleksei_Varaksin_Tracker */,
+				41EF98DD2503A88D00992B12 /* Products */,
+				29CD64FEA2C97C5F37897C82 /* Pods */,
+				668DD9D43FEBD92F26224F8D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		41EF98DD2503A88D00992B12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41EF98DC2503A88D00992B12 /* Aleksei_Varaksin_Tracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41EF98DE2503A88D00992B12 /* Aleksei_Varaksin_Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				41EF98DF2503A88D00992B12 /* AppDelegate.swift */,
+				41EF98E12503A88D00992B12 /* SceneDelegate.swift */,
+				41EF98F32503AD1A00992B12 /* MapViewController.swift */,
+				41EF98E52503A88D00992B12 /* Main.storyboard */,
+				41EF98E82503A88F00992B12 /* Assets.xcassets */,
+				41EF98EA2503A88F00992B12 /* LaunchScreen.storyboard */,
+				41EF98ED2503A88F00992B12 /* Info.plist */,
+			);
+			path = Aleksei_Varaksin_Tracker;
+			sourceTree = "<group>";
+		};
+		668DD9D43FEBD92F26224F8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				225B074C21CA8237FE6F5106 /* Pods_Aleksei_Varaksin_Tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		41EF98DB2503A88D00992B12 /* Aleksei_Varaksin_Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41EF98F02503A88F00992B12 /* Build configuration list for PBXNativeTarget "Aleksei_Varaksin_Tracker" */;
+			buildPhases = (
+				FDE7ED8AAEED0E2E664712AD /* [CP] Check Pods Manifest.lock */,
+				41EF98D82503A88D00992B12 /* Sources */,
+				41EF98D92503A88D00992B12 /* Frameworks */,
+				41EF98DA2503A88D00992B12 /* Resources */,
+				F084FDE7EA5460B70E5FDFF2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Aleksei_Varaksin_Tracker;
+			productName = Aleksei_Varaksin_Tracker;
+			productReference = 41EF98DC2503A88D00992B12 /* Aleksei_Varaksin_Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		41EF98D42503A88D00992B12 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Aleksei Niskarav";
+				TargetAttributes = {
+					41EF98DB2503A88D00992B12 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 41EF98D72503A88D00992B12 /* Build configuration list for PBXProject "Aleksei_Varaksin_Tracker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 41EF98D32503A88D00992B12;
+			productRefGroup = 41EF98DD2503A88D00992B12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41EF98DB2503A88D00992B12 /* Aleksei_Varaksin_Tracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41EF98DA2503A88D00992B12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41EF98EC2503A88F00992B12 /* LaunchScreen.storyboard in Resources */,
+				41EF98E92503A88F00992B12 /* Assets.xcassets in Resources */,
+				41EF98E72503A88D00992B12 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F084FDE7EA5460B70E5FDFF2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aleksei_Varaksin_Tracker/Pods-Aleksei_Varaksin_Tracker-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aleksei_Varaksin_Tracker/Pods-Aleksei_Varaksin_Tracker-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aleksei_Varaksin_Tracker/Pods-Aleksei_Varaksin_Tracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDE7ED8AAEED0E2E664712AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Aleksei_Varaksin_Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41EF98D82503A88D00992B12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41EF98E02503A88D00992B12 /* AppDelegate.swift in Sources */,
+				41EF98F42503AD1A00992B12 /* MapViewController.swift in Sources */,
+				41EF98E22503A88D00992B12 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		41EF98E52503A88D00992B12 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41EF98E62503A88D00992B12 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		41EF98EA2503A88F00992B12 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41EF98EB2503A88F00992B12 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		41EF98EE2503A88F00992B12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		41EF98EF2503A88F00992B12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		41EF98F12503A88F00992B12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDA1AC8FE2BCD7C8926558B6 /* Pods-Aleksei_Varaksin_Tracker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Aleksei_Varaksin_Tracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nisk.Aleksei-Varaksin-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		41EF98F22503A88F00992B12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AB22DA4CBED4CCEFF389BDE /* Pods-Aleksei_Varaksin_Tracker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Aleksei_Varaksin_Tracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nisk.Aleksei-Varaksin-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41EF98D72503A88D00992B12 /* Build configuration list for PBXProject "Aleksei_Varaksin_Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41EF98EE2503A88F00992B12 /* Debug */,
+				41EF98EF2503A88F00992B12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41EF98F02503A88F00992B12 /* Build configuration list for PBXNativeTarget "Aleksei_Varaksin_Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41EF98F12503A88F00992B12 /* Debug */,
+				41EF98F22503A88F00992B12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 41EF98D42503A88D00992B12 /* Project object */;
+}
