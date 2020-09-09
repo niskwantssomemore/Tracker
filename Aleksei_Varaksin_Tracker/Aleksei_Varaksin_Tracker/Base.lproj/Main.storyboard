@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Iw-WH-AUm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Iw-WH-AUm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -30,19 +30,20 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="vEF-RS-k5n">
-                        <barButtonItem key="leftBarButtonItem" title="Start tracking" id="oYe-1T-TlE">
+                        <barButtonItem key="leftBarButtonItem" title="Previous Routes" id="oYe-1T-TlE">
                             <connections>
-                                <action selector="startTracking:" destination="BYZ-38-t0r" id="viy-0T-tKs"/>
+                                <action selector="showPreviousRoutes:" destination="BYZ-38-t0r" id="25e-4J-WCa"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Stop tracking" id="7T9-8r-kFK">
+                        <barButtonItem key="rightBarButtonItem" title="Start tracking" id="7T9-8r-kFK">
                             <connections>
-                                <action selector="stopTracking:" destination="BYZ-38-t0r" id="EIP-Uu-l7U"/>
+                                <action selector="startTracking:" destination="BYZ-38-t0r" id="7e7-Vw-jJe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="qZ3-cf-bOt" id="aBz-YE-cNl"/>
+                        <outlet property="startStopTrackingBarButtonItem" destination="7T9-8r-kFK" id="GBN-YK-7Zv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
