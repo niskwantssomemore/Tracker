@@ -12,7 +12,7 @@ import GoogleMaps
 class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: GMSMapView!
-    @IBOutlet var startStopTrackingBarButtonItem: UIBarButtonItem!
+    @IBOutlet var startTrackingButton: UIButton!
     
     var locationManager: CLLocationManager?
     var route: GMSPolyline?
@@ -22,6 +22,9 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         configureMap()
         configureLocationManager()
+        if (routePath != nil) {
+            loadPreviousRoutes()
+        }
     }
     
     func configureMap() {
@@ -48,21 +51,20 @@ class MapViewController: UIViewController {
     private func loadPreviousRoutes() {
         configureRoute()
         route?.strokeColor = .green
-        routePath = RealmService.instance.loadRoutes()
         route?.path = routePath
         guard let setBounds = routePath else { return }
         let bounds = GMSCoordinateBounds(path: setBounds)
         mapView.animate(with: GMSCameraUpdate.fit(bounds))
     }
     
-    @IBAction func startTracking(_ sender: UIBarButtonItem) {
-        if (startStopTrackingBarButtonItem.title == "Stop tracking") {
+    @IBAction func startTracking(_ sender: Any) {
+        if (startTrackingButton.title(for: .normal) == "Stop tracking") {
             locationManager?.stopUpdatingLocation()
             DispatchQueue.global().async { [weak self] in
               guard let routePath = self?.routePath else { return }
               RealmService.instance.saveRoute(routePath)
             }
-            startStopTrackingBarButtonItem.title = "Start tracking"
+            startTrackingButton.setTitle("Start tracking", for: .normal)
         }
         else
         {
@@ -71,7 +73,7 @@ class MapViewController: UIViewController {
             routePath = GMSMutablePath()
             switch CLLocationManager.authorizationStatus() {
                 case .authorizedAlways, .authorizedWhenInUse:
-                    startStopTrackingBarButtonItem.title = "Stop tracking"
+                    startTrackingButton.setTitle("Stop tracking", for: .normal)
                     locationManager?.startUpdatingLocation()
                 case .notDetermined, .restricted, .denied:
                     showErrorLocationAlertController()
@@ -81,12 +83,12 @@ class MapViewController: UIViewController {
         }
     }
     
-    @IBAction func showPreviousRoutes(_ sender: UIBarButtonItem) {
-        if (startStopTrackingBarButtonItem.title == "Stop tracking") {
+    @IBAction func showPreviousRoutes(_ sender: Any) {
+        if (startTrackingButton.title(for: .normal) == "Stop tracking") {
             showErrorPreviousRoutesAlertController()
         }
         else {
-            loadPreviousRoutes()
+            performSegue(withIdentifier: "toRoutesTableViewControllerSegue", sender: nil)
         }
     }
 }

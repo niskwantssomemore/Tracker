@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3B1E2E7E9585F8EEA4578068 /* Pods_Aleksei_Varaksin_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225B074C21CA8237FE6F5106 /* Pods_Aleksei_Varaksin_Tracker.framework */; };
+		411407A9250A4062006EE72C /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411407A8250A4062006EE72C /* AuthenticationViewController.swift */; };
+		411407AB250A41AD006EE72C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411407AA250A41AD006EE72C /* User.swift */; };
+		41324D2C250CD4410074F63E /* RoutesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41324D2B250CD4410074F63E /* RoutesTableViewController.swift */; };
+		41324D2E250CD59A0074F63E /* RoutesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41324D2D250CD59A0074F63E /* RoutesTableViewCell.swift */; };
 		41CCFFBD250809D9006CF74A /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCFFBC250809D9006CF74A /* RealmService.swift */; };
 		41CCFFBF25080A48006CF74A /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCFFBE25080A48006CF74A /* Path.swift */; };
 		41EF98E02503A88D00992B12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF98DF2503A88D00992B12 /* AppDelegate.swift */; };
@@ -20,6 +24,10 @@
 
 /* Begin PBXFileReference section */
 		225B074C21CA8237FE6F5106 /* Pods_Aleksei_Varaksin_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aleksei_Varaksin_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		411407A8250A4062006EE72C /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		411407AA250A41AD006EE72C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		41324D2B250CD4410074F63E /* RoutesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesTableViewController.swift; sourceTree = "<group>"; };
+		41324D2D250CD59A0074F63E /* RoutesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesTableViewCell.swift; sourceTree = "<group>"; };
 		41CCFFBC250809D9006CF74A /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		41CCFFBE25080A48006CF74A /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		41EF98DC2503A88D00992B12 /* Aleksei_Varaksin_Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aleksei_Varaksin_Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,8 +87,12 @@
 				41EF98DF2503A88D00992B12 /* AppDelegate.swift */,
 				41EF98E12503A88D00992B12 /* SceneDelegate.swift */,
 				41EF98F32503AD1A00992B12 /* MapViewController.swift */,
+				411407A8250A4062006EE72C /* AuthenticationViewController.swift */,
 				41CCFFBC250809D9006CF74A /* RealmService.swift */,
 				41CCFFBE25080A48006CF74A /* Path.swift */,
+				41324D2B250CD4410074F63E /* RoutesTableViewController.swift */,
+				41324D2D250CD59A0074F63E /* RoutesTableViewCell.swift */,
+				411407AA250A41AD006EE72C /* User.swift */,
 				41EF98E52503A88D00992B12 /* Main.storyboard */,
 				41EF98E82503A88F00992B12 /* Assets.xcassets */,
 				41EF98EA2503A88F00992B12 /* LaunchScreen.storyboard */,
@@ -230,11 +242,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41324D2E250CD59A0074F63E /* RoutesTableViewCell.swift in Sources */,
 				41EF98E02503A88D00992B12 /* AppDelegate.swift in Sources */,
 				41EF98F42503AD1A00992B12 /* MapViewController.swift in Sources */,
 				41EF98E22503A88D00992B12 /* SceneDelegate.swift in Sources */,
+				41324D2C250CD4410074F63E /* RoutesTableViewController.swift in Sources */,
 				41CCFFBF25080A48006CF74A /* Path.swift in Sources */,
+				411407A9250A4062006EE72C /* AuthenticationViewController.swift in Sources */,
 				41CCFFBD250809D9006CF74A /* RealmService.swift in Sources */,
+				411407AB250A41AD006EE72C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

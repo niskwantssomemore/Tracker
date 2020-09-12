@@ -9,11 +9,12 @@
 import RealmSwift
 
 class Path: Object {
-  
-  @objc dynamic var path: String = ""
-  
-  convenience init (path: String) {
-    self.init()
-    self.path = path
-  }
+
+    @objc dynamic var path: String = ""
+    @objc dynamic var date: Date = Date()
+
+    convenience init (path: String) {
+        self.init()
+        self.path = path
+    }
 }
