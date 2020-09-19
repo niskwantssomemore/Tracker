@@ -67,14 +67,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoutesTableViewCell" id="ka5-Vh-j46" customClass="RoutesTableViewCell" customModule="Aleksei_Varaksin_Tracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="21"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="21.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ka5-Vh-j46" id="huJ-1q-JBY">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="21.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZC-j3-rSR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -172,6 +172,8 @@
                     <connections>
                         <outlet property="loginTextField" destination="vCu-QW-DV7" id="HTh-fn-vpa"/>
                         <outlet property="passwordTextField" destination="jzP-TU-GFb" id="ucB-Rg-4vR"/>
+                        <outlet property="signInButton" destination="Jhi-My-vj1" id="XAW-b5-FOW"/>
+                        <outlet property="signUpButton" destination="40m-0H-GS0" id="9AO-GZ-KTb"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="signInSignUpSegue" modalPresentationStyle="fullScreen" id="fcm-sk-66b"/>
                     </connections>
                 </viewController>

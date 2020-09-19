@@ -8,13 +8,15 @@
 
 import UIKit
 import GoogleMaps
+import RxSwift
 
 class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet var startTrackingButton: UIButton!
     
-    var locationManager: CLLocationManager?
+    private let locationManager = LocationManager.instance
+    private let disposeBag = DisposeBag()
     var route: GMSPolyline?
     var routePath: GMSMutablePath?
     
@@ -33,12 +35,16 @@ class MapViewController: UIViewController {
     }
     
     func configureLocationManager() {
-        locationManager = CLLocationManager()
-        locationManager?.allowsBackgroundLocationUpdates = true
-        locationManager?.pausesLocationUpdatesAutomatically = false
-        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager?.requestAlwaysAuthorization()
-        locationManager?.delegate = self
+        locationManager
+            .location
+            .asObservable()
+            .bind { [weak self] location in
+                guard let location = location else { return }
+                self?.routePath?.add(location.coordinate)
+                self?.route?.path = self?.routePath
+                self?.mapView.animate(to: GMSCameraPosition(target: location.coordinate, zoom: 15))
+        }
+        .disposed(by: disposeBag)
     }
     
     func configureRoute() {
@@ -48,7 +54,7 @@ class MapViewController: UIViewController {
         route?.map = mapView
     }
     
-    private func loadPreviousRoutes() {
+    func loadPreviousRoutes() {
         configureRoute()
         route?.strokeColor = .green
         route?.path = routePath
@@ -59,7 +65,7 @@ class MapViewController: UIViewController {
     
     @IBAction func startTracking(_ sender: Any) {
         if (startTrackingButton.title(for: .normal) == "Stop tracking") {
-            locationManager?.stopUpdatingLocation()
+            locationManager.stopUpdatingLocation()
             DispatchQueue.global().async { [weak self] in
               guard let routePath = self?.routePath else { return }
               RealmService.instance.saveRoute(routePath)
@@ -74,7 +80,7 @@ class MapViewController: UIViewController {
             switch CLLocationManager.authorizationStatus() {
                 case .authorizedAlways, .authorizedWhenInUse:
                     startTrackingButton.setTitle("Stop tracking", for: .normal)
-                    locationManager?.startUpdatingLocation()
+                    locationManager.startUpdatingLocation()
                 case .notDetermined, .restricted, .denied:
                     showErrorLocationAlertController()
                 @unknown default:

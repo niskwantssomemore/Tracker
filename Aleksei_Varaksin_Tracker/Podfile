@@ -8,5 +8,7 @@ target 'Aleksei_Varaksin_Tracker' do
   # Pods for Aleksei_Varaksin_Tracker
   pod 'GoogleMaps', '~> 3.10.0'
   pod 'RealmSwift', '~> 4.3.1'
+  pod 'RxSwift', '~> 5.1.1'
+  pod 'RxCocoa', '~> 5.1.1'
 
 end

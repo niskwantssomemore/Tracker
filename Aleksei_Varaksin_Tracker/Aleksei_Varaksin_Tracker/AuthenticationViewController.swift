@@ -7,56 +7,72 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class AuthenticationViewController: UIViewController {
 
     @IBOutlet var loginTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var signInButton: UIButton!
+    @IBOutlet var signUpButton: UIButton!
+
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setButtonsAvailability()
     }
     
     @IBAction func signInButtonPressed(_ sender: Any) {
         let login = loginTextField.text
         let password = passwordTextField.text
-        if (login == "" || password == "") {
-            showErrorLoginPasswordFillAlertController()
+        if (RealmService.instance.signInUser(login: login!, password: password!)) {
+            performSegue(withIdentifier: "signInSignUpSegue", sender: nil)
         }
         else {
-            if (RealmService.instance.signInUser(login: login!, password: password!)) {
-                performSegue(withIdentifier: "signInSignUpSegue", sender: nil)
-            }
-            else {
-                showErrorNoSuchUserAlertController()
-            }
+            showErrorNoSuchUserAlertController()
         }
     }
     
     @IBAction func signUpButtonPressed(_ sender: Any) {
         let login = loginTextField.text
         let password = passwordTextField.text
-        if (login == "" || password == "") {
-            showErrorLoginPasswordFillAlertController()
-        }
-        else {
-            if RealmService.instance.registerUser(login: login!, password: password!) {
-                performSegue(withIdentifier: "signInSignUpSegue", sender: nil)
-            }
+        if RealmService.instance.registerUser(login: login!, password: password!) {
+            performSegue(withIdentifier: "signInSignUpSegue", sender: nil)
         }
     }
 }
 
 extension AuthenticationViewController {
-    func showErrorLoginPasswordFillAlertController() {
-        let alertController = UIAlertController(title: "Error", message: "Please fill in login and password fields to continue", preferredStyle: UIAlertController.Style.alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alertController, animated: true, completion: nil)
-    }
     
     func showErrorNoSuchUserAlertController() {
         let alertController = UIAlertController(title: "Error", message: "Such user doesn't exist", preferredStyle: UIAlertController.Style.alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func setButtonsAvailability() {
+        Observable
+          .combineLatest(
+            loginTextField.rx.text,
+            passwordTextField.rx.text
+          )
+          .map { login, password in
+            return !(login ?? "").isEmpty && !(password ?? "").isEmpty
+          }
+          .bind(to: signInButton.rx.isEnabled)
+          .disposed(by: disposeBag)
+
+        Observable
+          .combineLatest(
+            loginTextField.rx.text,
+            passwordTextField.rx.text
+          )
+          .map { login, password in
+            return !(login ?? "").isEmpty && !(password ?? "").isEmpty
+          }
+          .bind(to: signUpButton.rx.isEnabled)
+          .disposed(by: disposeBag)
     }
 }
