@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PtB-Tr-A41">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PtB-Tr-A41">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,41 +18,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZ3-cf-bOt" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="44" width="414" height="608"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="688"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OC8-84-jTC">
-                                <rect key="frame" x="160" y="702" width="94" height="30"/>
-                                <state key="normal" title="Start tracking"/>
-                                <connections>
-                                    <action selector="startTracking:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7Q-k9-Zbp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6U-xW-obc">
-                                <rect key="frame" x="133" y="782" width="148" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6U-xW-obc">
+                                <rect key="frame" x="241" y="782" width="148" height="30"/>
                                 <state key="normal" title="Show previous routes"/>
                                 <connections>
                                     <action selector="showPreviousRoutes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E7f-AH-vJI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OC8-84-jTC">
+                                <rect key="frame" x="25" y="782" width="94" height="30"/>
+                                <state key="normal" title="Start tracking"/>
+                                <connections>
+                                    <action selector="startTracking:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7Q-k9-Zbp"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="OC8-84-jTC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="CFq-3E-rTp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qZ3-cf-bOt" secondAttribute="trailing" id="Gil-bd-EZK"/>
                             <constraint firstItem="qZ3-cf-bOt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HXY-WS-RQB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w6U-xW-obc" secondAttribute="bottom" constant="50" id="Hdh-lD-jDg"/>
-                            <constraint firstItem="OC8-84-jTC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PsO-mL-yo9"/>
-                            <constraint firstItem="OC8-84-jTC" firstAttribute="top" secondItem="qZ3-cf-bOt" secondAttribute="bottom" constant="50" id="R2S-nj-Vc3"/>
+                            <constraint firstItem="w6U-xW-obc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OC8-84-jTC" secondAttribute="trailing" constant="120" id="LXH-EJ-d5F"/>
+                            <constraint firstItem="OC8-84-jTC" firstAttribute="top" secondItem="qZ3-cf-bOt" secondAttribute="bottom" constant="50" id="Zjc-EZ-s7O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w6U-xW-obc" secondAttribute="trailing" constant="25" id="gWO-Fd-FMe"/>
                             <constraint firstItem="qZ3-cf-bOt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jdU-BP-Ds0"/>
-                            <constraint firstItem="w6U-xW-obc" firstAttribute="top" secondItem="OC8-84-jTC" secondAttribute="bottom" constant="50" id="lQJ-dQ-HbG"/>
-                            <constraint firstItem="w6U-xW-obc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ps9-bS-NxI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OC8-84-jTC" secondAttribute="bottom" constant="50" id="zn1-hw-ufQ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="qZ3-cf-bOt" id="aBz-YE-cNl"/>
                         <outlet property="startTrackingButton" destination="OC8-84-jTC" id="Yhs-9B-fMn"/>
-                        <segue destination="G8S-Mp-nS3" kind="presentation" identifier="toRoutesTableViewControllerSegue" modalPresentationStyle="fullScreen" id="p8t-VK-iKU"/>
+                        <segue destination="G8S-Mp-nS3" kind="presentation" identifier="toRoutesTableViewControllerSegue" modalPresentationStyle="fullScreen" id="96C-O7-j4y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,7 +67,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="t3r-jD-A4m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoutesTableViewCell" id="ka5-Vh-j46" customClass="RoutesTableViewCell" customModule="Aleksei_Varaksin_Tracker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="21.5"/>
@@ -98,10 +101,13 @@
                             <outlet property="delegate" destination="G8S-Mp-nS3" id="Gw2-Uh-syb"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ZgP-Tu-20c"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Iu-Wf-DZ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1806" y="134"/>
+            <point key="canvasLocation" x="1888" y="134"/>
         </scene>
         <!--Authentication View Controller-->
         <scene sceneID="T03-Y4-Sn3">
@@ -118,7 +124,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2b-K3-RLv">
-                                <rect key="frame" x="20" y="315" width="78.5" height="21"/>
+                                <rect key="frame" x="20" y="315" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -131,14 +137,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhi-My-vj1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhi-My-vj1">
                                 <rect key="frame" x="183.5" y="392.5" width="47" height="30"/>
                                 <state key="normal" title="Sign in"/>
                                 <connections>
                                     <action selector="signInButtonPressed:" destination="PtB-Tr-A41" eventType="touchUpInside" id="QSb-gb-t0l"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40m-0H-GS0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40m-0H-GS0">
                                 <rect key="frame" x="181" y="472.5" width="52" height="30"/>
                                 <state key="normal" title="Sign up"/>
                                 <connections>
@@ -151,7 +157,8 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="F6V-x2-8jt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="V2b-K3-RLv" firstAttribute="leading" secondItem="F6V-x2-8jt" secondAttribute="leading" constant="20" id="0UI-GY-ZZ1"/>
                             <constraint firstItem="vCu-QW-DV7" firstAttribute="leading" secondItem="rpd-ck-R0W" secondAttribute="trailing" constant="75" id="0fQ-wf-HUJ"/>
@@ -167,7 +174,6 @@
                             <constraint firstItem="V2b-K3-RLv" firstAttribute="centerX" secondItem="rpd-ck-R0W" secondAttribute="centerX" id="S1V-66-PVI"/>
                             <constraint firstItem="rpd-ck-R0W" firstAttribute="top" secondItem="F6V-x2-8jt" secondAttribute="top" constant="200" id="id3-sy-MnK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="F6V-x2-8jt"/>
                     </view>
                     <connections>
                         <outlet property="loginTextField" destination="vCu-QW-DV7" id="HTh-fn-vpa"/>
@@ -185,4 +191,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="fcm-sk-66b"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

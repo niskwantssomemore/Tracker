@@ -54,25 +54,14 @@ extension AuthenticationViewController {
     
     func setButtonsAvailability() {
         Observable
-          .combineLatest(
-            loginTextField.rx.text,
-            passwordTextField.rx.text
-          )
-          .map { login, password in
-            return !(login ?? "").isEmpty && !(password ?? "").isEmpty
-          }
-          .bind(to: signInButton.rx.isEnabled)
-          .disposed(by: disposeBag)
-
-        Observable
-          .combineLatest(
-            loginTextField.rx.text,
-            passwordTextField.rx.text
-          )
-          .map { login, password in
-            return !(login ?? "").isEmpty && !(password ?? "").isEmpty
-          }
-          .bind(to: signUpButton.rx.isEnabled)
-          .disposed(by: disposeBag)
+            .combineLatest(
+                loginTextField.rx.text,
+                passwordTextField.rx.text
+            )
+            .map { login, password in
+                return !(login ?? "").isEmpty && !(password ?? "").isEmpty
+            }
+            .bind(to: signInButton.rx.isEnabled, signUpButton.rx.isEnabled)
+            .disposed(by: disposeBag)
     }
 }

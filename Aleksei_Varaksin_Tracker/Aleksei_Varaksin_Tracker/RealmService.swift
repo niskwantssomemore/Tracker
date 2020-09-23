@@ -15,6 +15,17 @@ class RealmService {
 
     private init() {}
     
+    func deleteRoute(route: Object) {
+        do {
+            let realm = try Realm(configuration: Realm.Configuration(deleteRealmIfMigrationNeeded: true))
+            try realm.write {
+                realm.delete(route)
+            }
+        }  catch {
+            print(error.localizedDescription)
+        }
+    }
+    
     func loadRoutes() -> [Date: GMSMutablePath] {
         var result: [Date: GMSMutablePath] = [:]
         var routePath = GMSMutablePath()

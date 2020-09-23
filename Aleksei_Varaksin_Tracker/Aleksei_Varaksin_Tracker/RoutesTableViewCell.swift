@@ -14,7 +14,7 @@ class RoutesTableViewCell: UITableViewCell {
 
     public func configure(date: Date) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yyyy"
+        dateFormatter.dateFormat = "dd.MM.yyyy HH:mm"
         let date = dateFormatter.string(from: date)
         dateLabel.text = date
     }
